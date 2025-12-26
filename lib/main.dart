@@ -5,6 +5,7 @@ import 'package:flutter_project/basics/for_screen.dart';
 import 'package:flutter_project/basics/if_screen.dart';
 import 'package:flutter_project/basics/while_Screen.dart';
 import 'package:flutter_project/screens/main_screen.dart';
+import 'package:flutter_project/screens/post_screen.dart';
 import 'package:go_router/go_router.dart';
 // google 에서 기본으로 제공하는 예쁜 css 테마 사용
 // css를 이용해서 예쁘게 꾸민 상태로 테스트 진행하겠다.
@@ -85,6 +86,10 @@ final GoRouter _router = GoRouter(
     GoRoute(
       path:"/while",
       builder: (context, state) => const WhileScreen(),
+    ),
+    GoRoute(
+      path:"/insta-main",
+      builder: (context, state) => const PostScreen(),
     ),
   ]
 );
