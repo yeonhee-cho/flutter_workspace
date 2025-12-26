@@ -44,6 +44,14 @@ class _WhileScreenState extends State<WhileScreen> {
   * */
   int initCount = 0;
 
+  /*
+  * initState = 위젯이 생성될 때
+  * 단 한 번만 실행되는 초기화 메서드
+  * 용도 = API 호출, 리스너 등록, 컨트롤러 초기화 등 초기 작업 설정할 때 사용
+  * 카운트와 같은 형태에서는 사용하지 않음
+  *
+  * 클릭했을 때 값 변동의 경우에는 예제 1번 방법 사용하기
+  * */
   @override
   void initState() {
     // ctrl + o
