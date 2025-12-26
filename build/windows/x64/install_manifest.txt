@@ -1,0 +1,11 @@
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/icudtl.dat
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/flutter_windows.dll
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/AssetManifest.bin
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/FontManifest.json
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/fonts/MaterialIcons-Regular.otf
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/kernel_blob.bin
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/NativeAssetsManifest.json
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/NOTICES.Z
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/shaders/ink_sparkle.frag
+E:/fullstack_yeonhee/flutter_workspace/build/windows/x64/runner/Debug/data/flutter_assets/shaders/stretch_effect.frag
