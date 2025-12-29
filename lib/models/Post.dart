@@ -28,6 +28,7 @@ import 'dart:convert';
 
 // Alt + insert -> 생성자 선택
 // =======================================================================
+// _ 붙인 상태 = private, 안 붙인 상태 = public
 class Post {
   int postId;
   int userId;
@@ -41,6 +42,24 @@ class Post {
   int likeCount;
   int commentCount;
 
+  /*
+  * 자바에서는 매개변수 개수와 자료형만 다르면 클래스 명칭의 생성자를 다수 생성 가능
+  * Dart 에서는 동일한 명칭의 생성자를 다수 생성 불가
+  * 생성자마다 명칭을 다르게 작성해야 함
+  *
+  * 이름을 붙이는 방법은 .을 사용해 .하위명칭 형태로 작성,
+  * 명칭은 개발자가 원하는 대로 작성 후 사용
+  * Post.withDefaults
+  * Post.dummy 이런 형태로 작성
+  * 
+  * 사용 예시
+  * Post p1 = Post(postId:1, userId:100, ...)
+  * Post p2 = Post.withDefaults() 필수로 매개변수 데이터를 필요로 하는 생성자가 아니기 때문에 선택적으로 작성
+  *
+  * 보통은 1번 방법으로 많이 사용하고 다수의 생성자를 만들지 않는다.
+  * */
+  // 1. 필수 생성자 - 모든 값을 필수로 작성해야하는 생성자
+  // 가장 많이 사용됨
   Post({
     required this.postId,
     required this.userId,
@@ -54,6 +73,54 @@ class Post {
     required this.likeCount,
     required this.commentCount,
   });
+
+  // 2. 생성자에서 특정 변수 명칭에는 기본 값을 개발자가 작성
+  Post.withDefault({
+    this.postId = 0,
+    this.userId = 0,
+    this.postImage = '',
+    this.postCaption = '',
+    this.postLocation = '',
+    this.createdAt = '',
+    this.userName = '',
+    this.userFullname = '',
+    this.userAvatar = '',
+    this.likeCount = 0,
+    this.commentCount = 0,
+  });
+
+  // 3. 선택적 생성자로 모든 변수 데이터에 값을 추가하거나 넣어놓지 않아도 되는 생성자
+  // 3번 방법을 사용할 때는 변수 이름에 ? 체인닝 형태를 사용하여 에러를 최소화하는 것이 좋다
+  /*
+  맨 위 자료형과 변수 명칭을 선언할 때
+  ?를 전부 붙여줘야 한다
+  하지만 되도록 사용하지 않기!!!
+  int? postId;
+  int? userId;
+  String? postImage;
+  String? postCaption;
+  String? postLocation;
+  String? createdAt;
+  String? userName;
+  String? userFullname;
+  String? userAvatar;
+  int? likeCount;
+  int? commentCount;
+
+  Post.optional({
+    this.postId,
+    this.userId,
+    this.postImage,
+    this.postCaption,
+    this.postLocation,
+    this.createdAt,
+    this.userName,
+    this.userFullname,
+    this.userAvatar,
+    this.likeCount,
+    this.commentCount,
+  });
+  */
 
   // fromJson 은 백엔드에서 가져 온 데이터를 dart 보여주는 형식
   // toJson 은 어플에서 백엔드로 데이터를 저장할 때 사용하는 형식

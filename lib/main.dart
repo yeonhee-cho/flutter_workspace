@@ -89,7 +89,7 @@ final GoRouter _router = GoRouter(
     ),
     GoRoute(
       path:"/insta-main",
-      builder: (context, state) => const PostScreen(),
+      builder: (context, state) => PostScreen(),
     ),
   ]
 );
